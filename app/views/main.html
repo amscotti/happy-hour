@@ -1,0 +1,18 @@
+<div id="picks" class="container-narrow">
+    <p class="lead">Join the other <votes></votes> people and vote!</p>
+    <div class="row-fluid marketing">
+        <div class="span6">
+            <div ng-repeat="beer in beers | filter:isOdd">
+                <a class="btn-large btn btn-success" href="#/voted" ng-click="vote(beer)"><h4>{{beer.name}}</h4></a>
+                <count beer-id="{{beer.id}}"></count>
+            </div>
+        </div>
+
+        <div class="span6">
+            <div ng-repeat="beer in beers | filter:isEven">
+                <a class="btn-large btn btn-success" href="#/voted" ng-click="vote(beer)"><h4>{{beer.name}}</h4></a>
+                <count beer-id="{{beer.id}}"></count>
+            </div>
+        </div>
+    </div>
+</div>
